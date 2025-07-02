@@ -24,6 +24,12 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family:
+    Segoe UI,
+    Arial,
+    Helvetica,
+    sans-serif !important;
+  font-size: 16px !important;
 }
 
 img,
@@ -67,4 +73,15 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
