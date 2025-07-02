@@ -1,6 +1,6 @@
 <template>
   <header>
-    Free Shipping on domestic orders over RM100!
+    <span> Free Shipping on domestic orders over RM100! </span>
     <label>
       <span class="visually-hidden"> Search </span>
       <IconField>
@@ -22,6 +22,7 @@ const value1 = ref("");
 <style scoped>
 header {
   display: flex;
+  flex-wrap: wrap;
   padding: 4px 16px 4px 16px;
   gap: 16px;
   align-items: baseline;
@@ -29,8 +30,8 @@ header {
   color: white;
 }
 
-label {
-  margin-left: auto;
+span:first-of-type {
+  margin-right: auto;
 }
 
 a {
