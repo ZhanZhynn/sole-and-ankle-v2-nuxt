@@ -22,6 +22,7 @@ nav {
   border-bottom: 2px solid grey;
   min-height: 4rem;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .side {
@@ -35,6 +36,7 @@ ul {
   list-style-type: none;
   flex: 2 1 100px;
   padding: 0;
+  margin-left: -45px;
 }
 
 li:first-of-type {
