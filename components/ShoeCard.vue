@@ -1,17 +1,24 @@
 <template>
   <article>
-    <img src="https://courses.joshwcomeau.com/cfj-mats/dog-one-300px.jpg" />
+    <img :src="imgPath" />
     <section>
-      <h2>The One Weird Trick to get tasty dinner scraps</h2>
+      <h4>{{ props.name }}</h4>
+      <h4>MYR {{ props.price }}</h4>
       <p>
-        Step one: Find the friendliest human at the dinner table. Step two: Give
-        them sad pupper eyes. Step 3: Get slid human food on the sly.
+        {{ props.numcolors }} {{ props.numcolors > 1 ? "colors" : "color" }}
       </p>
     </section>
   </article>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps<{
+  name?: string;
+  imgPath?: string;
+  price?: number;
+  numcolors?: number;
+}>();
+</script>
 
 <style scoped>
 article {

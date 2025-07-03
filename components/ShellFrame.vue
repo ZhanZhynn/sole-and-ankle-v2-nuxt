@@ -12,7 +12,14 @@
       <h2>{{ title }}</h2>
 
       <div class="shoe-card">
-        <ShoeCard v-for="n in 6" :key="n" />
+        <ShoeCard
+          v-for="n in data"
+          :key="n.name"
+          :name="n.name"
+          :img-path="n.imageSrc"
+          :price="n.price"
+          :numcolors="n.numOfColors"
+        />
       </div>
     </div>
     <div class="aside">
@@ -28,7 +35,17 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ title?: string }>();
+type ShoeDetails = {
+  slug: string;
+  name: string;
+  imageSrc: string;
+  price: number;
+  salePrice: number | null;
+  releaseDate: Date;
+  numOfColors: number;
+};
+
+const props = defineProps<{ title?: string; data?: ShoeDetails[] }>();
 
 const selectedCity = ref({ name: "Newest Releases", code: "NR" });
 const cities = ref([
@@ -53,6 +70,7 @@ const title = ref(props.title);
 .shoe-card {
   display: flex;
   flex-wrap: wrap;
+  padding: 30px 0;
 }
 
 nav {
