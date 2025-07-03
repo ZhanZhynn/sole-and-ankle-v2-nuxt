@@ -10,6 +10,10 @@
     </nav>
     <div class="grid">
       <h2>{{ title }}</h2>
+
+      <div class="shoe-card">
+        <ShoeCard v-for="n in 6" :key="n" />
+      </div>
     </div>
     <div class="aside">
       <span>Sort</span>
@@ -39,19 +43,24 @@ const title = ref(props.title);
 <style scoped>
 .wrapper {
   display: flex;
-  height: 100vh;
-  overflow: auto;
-  position: sticky;
-  top: 0;
+  /* overflow: auto; */
 }
 
 .grid {
   flex: 3;
 }
 
+.shoe-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 nav {
   flex: 1;
   padding-left: 20px;
+  position: sticky;
+  top: 20px;
+  height: 0;
 }
 
 ul {
