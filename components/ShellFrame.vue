@@ -19,6 +19,8 @@
           :img-path="n.imageSrc"
           :price="n.price"
           :numcolors="n.numOfColors"
+          :sale-price="n.salePrice"
+          :release-date="n.releaseDate"
         />
       </div>
     </div>
@@ -40,8 +42,8 @@ type ShoeDetails = {
   name: string;
   imageSrc: string;
   price: number;
-  salePrice: number | null;
-  releaseDate: Date;
+  salePrice: number;
+  releaseDate: number;
   numOfColors: number;
 };
 
