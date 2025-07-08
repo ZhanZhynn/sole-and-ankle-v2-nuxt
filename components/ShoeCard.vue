@@ -53,7 +53,7 @@ article {
   margin: 8px;
   border-radius: 16px;
   box-shadow: 0px 2px 24px hsl(0deg 0% 0% / 0.2);
-  flex: 1 1 300px;
+  flex: 1 1 400px;
 }
 
 article img {
